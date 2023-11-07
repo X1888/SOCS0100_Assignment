@@ -76,21 +76,20 @@ plot2=function(variable_name){
   }# A function to help reader generate the trends of people able and unable access to electricity and clean fuels
 plot2("unableE")#Example
 
-plot3=function(year, Ratio){
+plot3=function(year, Variable_name){
   year_data=data1%>%
     filter(Year==year)%>%
-    select(ratioE, ratioF)
+    select(-Entity)
     if(nrow(year_data)==0){
       return(NA)
     }
-    ggplot(year_data,aes(x="1", y=.data[[Ratio]]))+
+    ggplot(year_data,aes(x="1", y=.data[[Variable_name]]))+
     geom_boxplot()+
     labs(
-      title=glue("The boxplot about {Ratio} in {year}"),
+      title=glue("The boxplot about {Variable_name} in {year}"),
       x="Year",
-      y="Ratio"
+      y=glue("{Variable_name}")
       )
 }
-plot3( "2005", "ratioF")
-
+plot3("2005", "accessE") # Example
 
