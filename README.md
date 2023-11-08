@@ -14,5 +14,5 @@
 ### You will get four functions to quickly assist you in completing research tasks.
 #### 1.QuickSelect-quickly select the data by country name and collection year.Example-QuickSelect("Country name", Year);
 #### 2.plot1-displays the proportion of people using electricity and clean energy for cooking over time in select country. Example-plot1("Country name");
-#### 3.plot2-automatically plot the changes in various variables over time. Example-plot2(Variabl name);
-#### 4.plot3-draw box plots for selected variables. Example-plot3(Year, Variable name)
+#### 3.plot2-automatically plot the changes in various variables over time. Example-plot2("Variabl name");
+#### 4.plot3-draw box plots for selected variables. Example-plot3("Year", "Variable name")
